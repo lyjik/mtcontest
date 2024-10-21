@@ -1,9 +1,14 @@
 @font-face {
-	font-family: 'Pretendard Variable';
-	font-weight: 45 920;
-	font-style: normal;
+  font-family: "Pretendard Variable";
+  src: url("./assets/fonts/PretendardJPVariable.ttf");
+  font-style: normal;
 	font-display: swap;
-	src: url('./assets/fonts/PretendardVariable.woff2') format('woff2-variations');
+}
+@font-face {
+  font-family: "Pretendard Variable";
+  src: url("./assets/fonts/PretendardVariable.ttf");
+  font-style: normal;
+	font-display: swap;
 }
 @font-face {
   font-family: 'GmarketSansMedium';
@@ -89,6 +94,7 @@ h1, h2, h3, h4, h5, p{
 }
 
 
+/* 영문 페이지 */
 /* 섹션1 */
 .section1{
   background-color: var(--bg-color1);
@@ -181,6 +187,9 @@ h1, h2, h3, h4, h5, p{
 .section3{
   padding-top: 130px;
 }
+.section3 .mainTitleBox{
+  margin-bottom: 78px;
+}
 .section3 .mainTitleBox p{
   font-weight: 600;
 }
@@ -204,7 +213,7 @@ h1, h2, h3, h4, h5, p{
   align-items: center;
 }
 .section3 .content1 .step1{
-  padding: 36px;
+  padding: 42px 36px;
 }
 .section3 .content1 .step .bgc1{
   display: inline-block;
@@ -218,6 +227,11 @@ h1, h2, h3, h4, h5, p{
   font-size: 34.3485px;
   line-height: 41px;
   color: #fff;
+}
+.section3 .content1 .step2 .bgc1{
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
 }
 .section3 .content1 .step h4{
   font-weight: 900;
@@ -493,7 +507,6 @@ h1, h2, h3, h4, h5, p{
   width: 170px;
   padding: 4.533px 0;
   border-radius: 75.275px;
-  background: #F35157;
   box-sizing: border-box;
   text-align: center;
   color: #FFF;
@@ -604,6 +617,7 @@ h1, h2, h3, h4, h5, p{
 .section6 .content .text1{
   color: #A6771F;
   font-size: 16px;
+  font-weight: 500;
 }
 .section6 .content .text2{
   font-size: 18px;
@@ -633,6 +647,79 @@ h1, h2, h3, h4, h5, p{
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/* 중문 페이지 */
+.chinese .mainTitleBox h2 {
+  font-family: var(--main-font);
+  font-size: 65px;
+  font-weight: 800;
+}
+.chinese .mainTitleBox p {
+  font-weight: 600;
+}
+.chinese .section3 .content1 .step h4 {
+  font-size: 39.167px;
+  line-height: 39.972px;
+}
+.chinese .section3 .content1 .step1 {
+  flex: 1;
+}
+.chinese .section3 .content1 .step2 {
+  width: 24%;
+}
+.chinese .section3 .content2 h3 {
+  font-family: var(--main-font);
+  font-weight: 800;
+  font-size: 40px;
+}
+.chinese .section3 .content3 h3 {
+  font-family: var(--main-font);
+  font-size: 32.201px;
+  font-weight: 800;
+}
+.chinese .section3 .content3 h3 span {
+  font-family: var(--main-font);
+  font-size: 29.101px;
+  font-weight: 800;
+}
+.chinese .section4 .content .prize {
+  padding: 0 12px 0 30px;
+}
+.chinese .section4 .content .prize>div:nth-child(2) span {
+  font-size: 23px;
+  font-weight: 400;
+}
+.chinese .section4 .content .prize .qty {
+  font-size: 24px;
+}
+.chinese .section4 .content .prize:last-child .bgc1{
+  width: 170px;
+  padding: 4.533px 0;
+  border-radius: 75.275px;
+  box-sizing: border-box;
+  text-align: center;
+  color: #FFF;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 700;
+}
+.chinese .section4 .content .prize:last-child{
+  height: 64px;
+}
+.chinese .section5 .content .bgc2 {
+  font-size: 33px;
+}
+.chinese .section5 .bgc1 {
+  font-size: 35px;
+}
+.chinese .section6 .mainTitleBox h2 {
+  font-size: 30px;
+  font-weight: 800;
+  line-height: 30px;
+}
+.chinese .section6 .content .text4 {
+  font-weight: 600;
 }
 
 
@@ -676,8 +763,16 @@ h1, h2, h3, h4, h5, p{
     font-size: 20px;
     line-height: unset;
   }
+  .chinese .section4 .content .prize>div:nth-child(2) span {
+    font-size: 17px;
+    line-height: unset;
+  }
   .section4 .content .prize .qty {
+    width: 8vw;
     font-size: 18px;
+  }
+  .chinese .section4 .content .prize .qty {
+    font-size: 16px;
   }
 }
 @media (max-width: 767px) {
@@ -700,6 +795,9 @@ h1, h2, h3, h4, h5, p{
   .mainTitleBox h2 {
     font-size: 7.8vw;
   }
+  .chinese .mainTitleBox h2 {
+    font-size: 8.46vw;
+  }
   .mainTitleBox p {
     font-size: 4.17vw;
   }
@@ -711,10 +809,13 @@ h1, h2, h3, h4, h5, p{
     line-height: unset;
     text-align: center;
     color: #fff;
-    padding: 19px 1rem;
+    padding: 2.47vw 1rem;
   }
   .section3 {
     padding-top: 80px;
+  }
+  .section3 .mainTitleBox {
+    margin-bottom: 10.2vw;
   }
   .section3 .content1 {
     flex-flow: column;
@@ -738,12 +839,23 @@ h1, h2, h3, h4, h5, p{
     border-radius: 10.6vw;
     font-size: 4.47vw;
   }
+  .section3 .content1 .step2 .bgc1 {
+    left: 24px;
+    transform: translateX(0);
+  }
+  .chinese .section3 .content1 .step2 {
+    width: 100%;
+    box-sizing: border-box;
+  }
   .section3 .content1 .step h4 {
     font-size: 4.1vw;
     line-height: unset;
   }
+  .chinese .section3 .content1 .step h4 {
+    font-size: 5.1vw;
+  }
   .section3 .content1 .step1 {
-    padding: 36px 4.7vw;
+    padding: 42px 4.7vw;
   }
   .section3 .content1 .step1 p:nth-of-type(1) {
     font-size: 2.9vw;
@@ -792,6 +904,9 @@ h1, h2, h3, h4, h5, p{
     font-size: 3.6vw;
     line-height: unset;
   }
+  .chinese .section3 .content2 h3 {
+    font-size: 5.2vw;
+  }
   .section3 .content2 .bgc1, .section3 .content2 .bgc3 {
     padding: 0.8vw 2.6vw;
     border-radius: 7.57vw;
@@ -814,9 +929,15 @@ h1, h2, h3, h4, h5, p{
     font-size: 3.35vw;
     line-height: unset;
   }
+  .chinese .section3 .content3 h3 {
+    font-size: 4.19vw;
+  }
   .section3 .content3 h3 span {
     font-size: 3vw;
     line-height: unset;
+  }
+  .chinese .section3 .content3 h3 span {
+    font-size: 3.8vw;
   }
   .section3 .content3>div .bgc2 {
     padding: 2.34vw 4vw;
@@ -864,8 +985,14 @@ h1, h2, h3, h4, h5, p{
     padding: 0 7vw 0 3.9vw;
     gap: 5.1vw;
   }
+  .chinese .section4 .content .prize {
+    height: 8.33vw;
+    border-radius: 6.25vw;
+    padding: 0 1.56vw 0 3.9vw;
+    gap: 2vw;
+  }
   .section4 .content .prize .bgc1 {
-    width: 22.14vw;
+    width: 18vw;
     padding: 0.6vw 0;
     border-radius: 9.8vw;
     font-size: 3vw;
@@ -874,16 +1001,31 @@ h1, h2, h3, h4, h5, p{
     border-radius: 2.08vw;
     font-size: 2.6vw;
   }
+  .chinese .section4 .content .prize:last-child .bgc1 {
+    width: 18vw;
+    padding: 0.6vw 0;
+    border-radius: 9.8vw;
+    font-size: 3vw;
+  }
   .section4 .content .prize>div:nth-child(2) {
     font-size: 2.6vw;
     line-height: unset;
+  }
+  .chinese .section4 .content .prize>div:nth-child(2) span {
+    font-size: 2.2vw;
   }
   .section4 .content .prize .qty {
     width: 8vw;
     font-size: 2.34vw;
   }
+  .chinese .section4 .content .prize .qty {
+    font-size: 2.1vw;
+  }
   .section4 .content .prize:last-child {
     height: 10.4vw;
+  }
+  .chinese .section4 .content .prize:last-child {
+    height: 8.33vw;
   }
   .section5 {
     padding-top: 80px;
@@ -898,6 +1040,9 @@ h1, h2, h3, h4, h5, p{
     border-radius: 8.6vw;
     font-size: 3.65vw;
   }
+  .chinese .section5 .content .bgc2 {
+    font-size: 4.3vw;
+  }
   .section5 p {
     font-size: 4.17vw;
     line-height: unset;
@@ -910,6 +1055,9 @@ h1, h2, h3, h4, h5, p{
     border-radius: 7.3vw;
     font-size: 3.9vw;
   }
+  .chinese .section5 .bgc1 {
+    font-size: 4.56vw;
+  }
 
 
 
@@ -917,6 +1065,10 @@ h1, h2, h3, h4, h5, p{
     margin-bottom: 4.4vw;
   }
   .section6 .mainTitleBox h2{
+    font-size: 3.9vw;
+    line-height: 5.85vw;
+  }
+  .chinese .section6 .mainTitleBox h2 {
     font-size: 3.9vw;
     line-height: 5.85vw;
   }

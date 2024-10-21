@@ -572,6 +572,45 @@ h1, h2, h3, h4, h5, p{
   text-align: center;
   font-size: 30px;
   font-weight: 700;
+  cursor: pointer;
+}
+.section5 .modal{
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 30px 30px 0 30px;
+  box-sizing: border-box;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  background-color: var(--bg-color2);
+  margin-top: 40px;
+  border-radius: 16px;
+}
+.section5 .modal .textBox{
+  display: flex;
+  flex-flow: column;
+  gap: 10px;
+}
+.section5 .modal .textBox p{
+  margin-bottom: unset;
+  /* color: #FFF; */
+  text-align: start;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 26px;
+}
+.section5 .close {
+  width: fit-content;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #FFF;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
 }
 
 /* 섹션6 */
@@ -1058,7 +1097,21 @@ h1, h2, h3, h4, h5, p{
   .chinese .section5 .bgc1 {
     font-size: 4.56vw;
   }
-
+  .section5 .modal{
+    padding: 3.9vw 3.9vw 0 3.9vw;
+    margin-top: 5.2vw;
+  }
+  .section5 .modal .textBox p{
+    font-size: 2.6vw;
+    font-weight: 500;
+    line-height: 3.4vw;
+  }
+  .section5 .close {
+    margin-bottom: 2.6vw;
+    padding: 1vw 2.1vw;
+    border-radius: 2.6vw;
+    font-size: 2.1vw;
+  }
 
 
   .section6 .mainTitleBox{

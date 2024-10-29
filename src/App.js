@@ -14,6 +14,7 @@ import Section3_1_ch from './components/chinese/Section3-1';
 import Section4_ch from './components/chinese/Section4';
 import Section5_ch from './components/chinese/Section5';
 import Section6_ch from './components/chinese/Section6';
+import Banner from './components/Banner';
 
 function App() {
 
@@ -23,29 +24,34 @@ function App() {
   useEffect(() => {
     // 아래 코드 주석 처리 해제 시 중문 페이지
     // setLanguage('chinese')
+
+    // 아래 코드 주석 처리 해제 시 배너 페이지
+    // setLanguage('banner')
   }, [])
 
   return (
     <div className="App">
-      {language === 'chinese' ?
-        <main className='chinese'>
-          <Section1_ch/>
-          <Section2_ch/>
-          <Section3_ch/>
-          <Section3_1_ch/>
-          <Section4_ch/>
-          <Section5_ch/>
-          <Section6_ch/>
-        </main> :
-        <main className='english'>
-          <Section1/>
-          <Section2/>
-          <Section3/>
-          <Section3_1/>
-          <Section4/>
-          <Section5/>
-          <Section6/>
-        </main>
+      {language === 'banner' ?
+        <Banner/> :
+        language === 'chinese' ?
+          <main className='chinese'>
+            <Section1_ch/>
+            <Section2_ch/>
+            <Section3_ch/>
+            <Section3_1_ch/>
+            <Section4_ch/>
+            <Section5_ch/>
+            <Section6_ch/>
+          </main> :
+          <main className='english'>
+            <Section1/>
+            <Section2/>
+            <Section3/>
+            <Section3_1/>
+            <Section4/>
+            <Section5/>
+            <Section6/>
+          </main>
       }
     </div>
   );

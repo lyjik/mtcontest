@@ -528,27 +528,29 @@ h1, h2, h3, h4, h5, p{
 .section5 .mainTitleBox{
   margin-bottom: 72px;
 }
-.section5 .content{
+.section5 .content1{
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  gap: 44px;
+  margin-bottom: 73px;
+}
+.section5 .content2{
+  width: 100%;
   margin-bottom: 76px;
 }
-.section5 .content>div{
-  flex: 1;
+.section5 .content2>div:nth-child(2){
   display: flex;
-  flex-flow: column;
-  gap: 20px;
+  gap: 44px;
   align-items: center;
 }
-.section5 .content .videoBox{
+.section5 .content2 .videoBox{
   width: 100%;
   height: 236px;
   border-radius: 16px;
   background: #FFF;
 }
-.section5 .content .bgc2{
+.section5 .bgc2{
+  width: fit-content;
+  margin: 0 auto;
+  margin-bottom: 34px;
   padding: 12px 28px;
   border-radius: 66.321px;
   box-sizing: border-box;
@@ -566,6 +568,8 @@ h1, h2, h3, h4, h5, p{
   line-height: 48px;
 }
 .section5 .bgc1{
+  width: fit-content;
+  margin: 0 auto;
   padding: 10px 35px;
   border-radius: 56.277px;
   color: #FFF;
@@ -581,10 +585,11 @@ h1, h2, h3, h4, h5, p{
   box-sizing: border-box;
   display: flex;
   flex-flow: column;
-  align-items: center;
-  background-color: var(--bg-color2);
+  background-color: #fff;
   margin-top: 40px;
   border-radius: 16px;
+  border: 4.7px solid #FFC353;
+  box-sizing: border-box;
 }
 .section5 .modal .textBox{
   display: flex;
@@ -593,11 +598,15 @@ h1, h2, h3, h4, h5, p{
 }
 .section5 .modal .textBox p{
   margin-bottom: unset;
-  /* color: #FFF; */
+  color: #000;
   text-align: start;
   font-size: 20px;
   font-weight: 500;
-  line-height: 26px;
+  line-height: 34px;
+}
+.section5 .modal .textBox p span{
+  color: rgba(192, 0, 0);
+  font-weight: 700;
 }
 .section5 .close {
   width: fit-content;
@@ -746,7 +755,7 @@ h1, h2, h3, h4, h5, p{
 .chinese .section4 .content .prize:last-child{
   height: 64px;
 }
-.chinese .section5 .content .bgc2 {
+.chinese .section5 .bgc2 {
   font-size: 33px;
 }
 .chinese .section5 .bgc1 {
@@ -761,6 +770,45 @@ h1, h2, h3, h4, h5, p{
   font-weight: 600;
 }
 
+/* 배너 */
+.bannerContainer{
+  width: 200px;
+  height: 200px;
+  border-radius: 141px;
+  background: var(--bg-color1);
+  background-image: url(./assets/banner_bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  padding-top: 12.5px;
+  padding-bottom: 8.19px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.bannerContainer .bgc1{
+  padding: 1.948px 6.401px;
+  border-radius: 18.457px;
+  margin-bottom: 7.39px;
+}
+.bannerContainer .bgc1 h1{
+  color: #FFF;
+  font-size: 7.792px;
+  font-weight: 700;
+}
+.bannerContainer p{
+  color: #937338;
+  text-align: center;
+  font-size: 9.538px;
+  font-weight: 800;
+  letter-spacing: -0.191px;
+  margin-bottom: 4.5px;
+}
+.bannerContainer>div:nth-child(2){
+  margin-bottom: 4.15px;
+}
 
 
 @media (max-width: 1000px) {
@@ -788,7 +836,7 @@ h1, h2, h3, h4, h5, p{
   .section5 .mainTitleBox{
     margin-bottom: 7.2vw;
   }
-  .section5 .content{
+  .section5 .content2{
     margin-bottom: 7.6vw;
   }
   .section5 p{
@@ -1070,25 +1118,28 @@ h1, h2, h3, h4, h5, p{
     padding-top: 80px;
     padding-bottom: 80px;
   }
-  .section5 .content {
-    flex-flow: column;
+  .section5 .content2 {
     margin-bottom: 9.9vw;
   }
-  .section5 .content .bgc2 {
+  .section5 .content2>div:nth-child(2){
+    flex-flow: column;
+    gap: 1rem;
+  }
+  .section5 .bgc2 {
     padding: 1.56vw 3.65vw;
     border-radius: 8.6vw;
     font-size: 3.65vw;
   }
-  .chinese .section5 .content .bgc2 {
+  .chinese .section5 .bgc2 {
     font-size: 4.3vw;
   }
   .section5 p {
     font-size: 4.17vw;
     line-height: unset;
   }
-  .section5 p br{
+  /* .section5 p br{
     display: none;
-  }
+  } */
   .section5 .bgc1 {
     padding: 1.3vw 4.56vw;
     border-radius: 7.3vw;
@@ -1104,7 +1155,7 @@ h1, h2, h3, h4, h5, p{
   .section5 .modal .textBox p{
     font-size: 2.6vw;
     font-weight: 500;
-    line-height: 3.4vw;
+    line-height: 4.43vw;
   }
   .section5 .close {
     margin-bottom: 2.6vw;

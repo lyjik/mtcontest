@@ -43,8 +43,6 @@ const Section5 = () => {
                 <div className="content2">
                     <div className="bgc2">描述视频</div>
                     <div>
-
-                        <div className="videoBox"></div>
                         <div className="videoBox"></div>
                     </div>
                 </div>

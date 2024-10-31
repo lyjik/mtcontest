@@ -80,7 +80,6 @@ const Section5 = () => {
                     <div className="bgc2">Sketch Video</div>
                     <div>
                         <div className="videoBox"></div>
-                        <div className="videoBox"></div>
                     </div>
                 </div>
                 {/* <p>Click the button for the Korean guide needed<br /> for filming your branch introduction video!</p> */}
